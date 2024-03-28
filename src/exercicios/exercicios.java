@@ -1,133 +1,61 @@
 
 package exercicios;
 
+import java.util.Scanner;
+
 public class exercicios {
  
-            
-//1. Crie uma variável para um número inteiro com o valor 10 e imprima;
-    public static void ex1(){
-      
-        int num = 10;
-        System.out.println(num);
-    }
-    
-//2. Crie uma variável para um número de ponto flutuante e imprima;   
-    public static void ex2(){
-        
-        double num = 10.0;
-        System.out.println(num);
-    }
-    
-//3. Crie uma variável contendo o texto Linguagem de programação e imprima;    
-    public static void ex3(){
-        
-        String text = "Linguagem de programação";
-        System.out.println(text);
-    }
-    
- //4. Crie 4 variáveis com números inteiros e realize o cálculo da média;   
-    public static void ex4(){
-        int num1 = 5, num2 = 2, num3= 10, num4 = 10;
-        int result = (num1+num2+num3+num4)/4;
-        
-        System.out.println("A media é " + result);
-    }
-    
-//5. Crie 4 variáveis com números de ponto flutuante e realize o cálculo da média;
-    public static void ex5(){
-        double num1 = 5.0, num2=3.0, num3=10.0, num4=10.0;
-        double result = (num1+num2+num3+num4)/4;
-        
-        System.out.println("A media é "+ result);
-    }
-//6. Crie uma variável para o texto “Banco de dados” e imprima o texto “Disciplina” mais o
-//valor da variável criada;
-    public static void ex6(){
-        String texto = "Banco de dados";
-        System.out.println("Diciplina "+texto);
-        
-    }
-    
-//7. Crie um algoritmo que dado um valor inteiro a uma variável imprima se o valor é maior que
-//10 ou menor que 10;
-    public static void ex7(){
-        int num = 10;
-        String result;
-        if(num > 10){
-           result = "Num é maior que 10";
-        }else if(num == 10){
-           result = "Num é igual a 10";
-        }else{
-           result = "Num é menor que 10";
-        }
-        System.out.println(result);
-    }
-    
-//8. Crie um algoritmo que dado um valor inteiro a uma variável imprima se é par ou ímpar;
-    public static void ex8(){
-        int num = 2;
-        String result;
-        if(num%2 == 0){
-            result = "é par";
-        }else{
-            result = "é impar";
-        }
-        System.out.println(result);
-    }
-    
-//9. Crie um algoritmo que conte até 10;
-    public static void ex9(){
-        for(int i=0;i <= 10;i++){
-            System.out.println("Valor de I "+i);
-        }
-    }
-    
-//10. Crie um algoritmo que conte até 1000 de 100 em 100 números;
-    public static void ex10(){
-        for(int i=1000 ; i >= 100 ; i = i -100){
-            System.out.println("Valor de I "+i);
-        }
-    }
-    
-//11. Crie uma lista que comporte 4 itens de texto e imprima a lista;
-    public static void ex11(){
-        String[] texto = new String[] {"Java","é","Muito","top"};
-        for(int i=0; i < 4 ; i++){
-            System.out.println(texto[i]);
-        }
-    }
-    
-//12. Crie uma lista que comporte 3 números inteiros e imprima a lista;
-    public static void ex12(){
-        Integer[] num = new Integer[]{1,2,3};
-        for(int i=0; i < 3 ; i++){
-            System.out.println(num[i]);
-        }
-    }
-    
-//13. Crie uma lista que comporte 3 números de ponto de flutuante e imprima a lista;
-    public static void ex13(){
-        Double[] num = new Double[]{1.0,2.3,3.2};
-        for(int i=0; i < 3 ; i++){
-            System.out.println(num[i]);
-        }
-    }
     public static void main(String[] args) {
 
+        Scanner read = new Scanner(System.in);
+        cadernoExercicios lista = new cadernoExercicios();
         
-        ex1();
-        ex2();
-        ex3();
-        ex4();
-        ex5();
-        ex6();
-        ex7();
-        ex8();
-        ex9();
-        ex10();
-        ex11();
-        ex12();
-        ex13();
+        System.out.println("Selecione um Exercicios de 1 a 13 para ver seu enunciado e sua solução");
+        int option = read.nextInt();
+        switch (option) {
+            case 1:
+                lista.ex1();
+                break;
+            case 2:
+                lista.ex2();
+                break;
+            case 3:
+                lista.ex3();
+                break;
+            case 4:
+                lista.ex4();
+                break;
+            case 5:
+                lista.ex5();
+                break;
+            case 6:
+                lista.ex6();
+                break;
+            case 7:
+                lista.ex7();
+                break;
+            case 8:
+                lista.ex8();
+                break;
+            case 9:
+                lista.ex9();
+                break;
+            case 10:
+                lista.ex10();
+                break;
+            case 11:
+                lista.ex11();
+                break;
+            case 12:
+                lista.ex12();
+                break;
+            case 13:
+                lista.ex13();
+                break;
+            default:
+                System.out.println("Selecione um Exercicio valido");
+        }
+    
   
         
     }
